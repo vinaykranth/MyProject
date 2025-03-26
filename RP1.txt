@@ -1,0 +1,70 @@
+Resource paper
+ 
+Monolithic vs. Microservice Architecture: A Performance and Scalability Evaluation
+
+source: https://ieeexplore.ieee.org/document/9717259?denied=
+
+
+Abstract
+This paper compares monolithic and microservice architectures in terms of performance and scalability. While microservices are popular among tech giants like Netflix and Amazon, their benefits for smaller businesses remain unclear The application was implemented in four different versions, covering not only two different architectural styles (monolith vs. microservices) but also two different implementation technologies (Java vs. C#.NET). Next, we conducted a series of controlled experiments in three different deployment environments (local, Azure Spring Cloud, and Azure App Service). 
+
+
+Problem Statement
+Microservices are trending, but their benefits for smaller businesses remain uncertain.
+
+Many companies switch from monolithic to microservices, expecting improved scalability, availability, and maintenance.
+
+However, microservices add complexity, including:
+
+Difficult service boundaries identification.
+
+Complex data management across services.
+
+Increased computing resource consumption.
+
+The study aims to provide empirical evidence on whether microservices are truly beneficial compared to monolithic architectures for smaller applications.
+
+
+EXISTING SOLUTION 
+The study found that microservices are not always the best choice—especially for small applications. Many small companies
+because they are trendy**, but this research shows that:
+
+✅ Monolithic applications perform better on a single machine.
+✅ Java is better for computation-heavy tasks, while .NET works better for lightweight tasks on small machines.
+✅ Vertical scaling (upgrading a single machine) is more cost-effective than horizontal scaling (adding more servers) in the cloud.
+✅ Adding too many instances can actually reduce performance instead of improving it.
+✅ The choice of programming language does not significantly affect scalability
+
+
+OUR PROBLEM STATMENT
+How Big Companies Operate:
+Netflix, Amazon, and Google handle millions of users daily.
+
+They need massive server farms, distributed databases, and global cloud services.
+
+Their applications run on thousands of microservices, each handling a small part of their operations (e.g., Netflix’s video streaming, Amazon’s product recommendations)
+
+How Smaller Businesses Operate:
+They have fewer users and less data to manage.
+
+They often use simpler architectures like monolithic or hybrid systems.
+
+
+
+
+AI-Based Solution: Intelligent Service Merging for Microservices on a Single Machine
+ Problem: Microservices perform worse on a single machine due to excessive network communication, API overhead, and higher CPU/memory consumption from managing multiple independent services.
+
+
+ AI-Based Solution: Intelligent Service Merging & Dynamic Adaptation
+
+Instead of forcing all microservices to remain separate, we can use an AI-driven optimization system to merge related microservices dynamically when running on a single machine.
+
+How It Works?
+We implement an AI-based Service Orchestration Engine that analyzes microservices' interactions and:
+
+Detects frequently communicating microservices.
+
+Merges those services dynamically into a single process to reduce API/network overhead.
+
+Re-separates them if needed when scaling up.
